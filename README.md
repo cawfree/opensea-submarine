@@ -67,7 +67,9 @@ const {data} = await axios({
 
 You can check out the [__examples__](./scripts/start.ts) for additional insight.
 
-Developers are reminded that the query content and `x-signed-query` header must be __identical__ to real `graphql/` requests sourced from OpenSea, which can be found in your browser's __Networking__ tab. By contrast, request `variables` are permitted to change freely.
+Developers are reminded that the query content and `x-signed-query` header must be __identical__ to real `graphql/` requests sourced from OpenSea, which can be found in your browser's __Networking__ tab.
+
+By contrast, request `variables` are permitted to change freely.
 
 ## ✌️ license
 [__MIT__](./LICENSE)
