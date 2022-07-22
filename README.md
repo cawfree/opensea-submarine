@@ -1,5 +1,7 @@
 # opensea-submarine
 
+[watch me breakdown](https://twitter.com/cawfree/status/1550505696747307013)
+
 [__OpenSea__](https://opensea.io) is the world's foremost NFT marketplace which takes great care to protect its API from abuse by [__ETH__](https://ethereum.org/en/)-hungry robots who are desperate to discover profit opportunities the fastest.
 
 OpenSea makes this task difficult in a number of ways:
