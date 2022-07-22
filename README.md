@@ -30,9 +30,25 @@ import axios from 'axios';
 
 import {proxyMiddleware} from 'opensea-submarine';
 
-express()
-  .use('/graphql', await proxyMiddleware({}))
-  .listen(3000);
+const openSeaEnvironment = {
+  graphQLUri: 'https://opensea.io/__api/graphql/',
+  eventHistoryUri: 'https://opensea.io/collection/boredapeyachtclub?tab=activity',
+  privacyUri: 'https://opensea.io/privacy',
+};
+
+const proxyContext = await createProxyContext(openSeaEnvironment);
+
+const server = await new Promise<Server>(
+  async resolve => {
+    const server = express()
+      .use(cors())
+      .use(await proxyMiddleware({
+        debug: true,
+        proxyContext,
+      }))
+      .listen(3000, () => resolve(server));
+  },
+);
 ```
 
 Then you're free to query the middleware using queries that are recognized by OpenSea:
