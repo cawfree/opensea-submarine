@@ -1,6 +1,6 @@
 {
   "name": "express-opensea-graphql-middleware",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "🏴‍☠️ 🧸 Enabling subversive transactions with OpenSea's GraphQL backend using Express middleware.",
   "main": "dist",
   "repository": "https://github.com/cawfree/opensea-submarine",
