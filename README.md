@@ -69,7 +69,5 @@ You can check out the [__examples__](./scripts/start.ts) for additional insight.
 
 Developers are reminded that the query content must be identical to real `graphql/` requests sourced from OpenSea, which can be found in your browser's __Networking__ tab. By contrast, request `variables` are permitted to change freely.
 
-> __Notice:__ Queries and their signatures change often.
-
 ## ✌️ license
 [__MIT__](./LICENSE)
