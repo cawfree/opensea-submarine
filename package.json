@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "🏴‍☠️ 🧸 Enabling subversive transactions with OpenSea's GraphQL backend using Express middleware.",
   "main": "dist",
-  "repository": "https://github.com/cawfree/express-opensea-graphql-middleware",
+  "repository": "https://github.com/cawfree/opensea-submarine",
   "author": "cawfree <hello@cawfree.com>",
   "license": "MIT",
   "private": false,
