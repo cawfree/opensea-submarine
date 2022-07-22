@@ -1,4 +1,4 @@
-# express-opensea-graphql-middleware
+# opensea-submarine
 
 [__OpenSea__](https://opensea.io) is the world's foremost NFT marketplace which takes great care to protect its API from abuse by [__ETH__](https://ethereum.org/en/)-hungry robots who are desperate to discover profit opportunities the fastest.
 
@@ -16,7 +16,7 @@ By using a [_stealthy_](https://www.npmjs.com/package/puppeteer-extra-plugin-ste
 Using [__Yarn__](https://yarnpkg.com/):
 
 ```bash
-yarn add express-opensea-graphql-middleware
+yarn add opensea-submarine
 ```
 
 ## ✏️ usage
@@ -28,7 +28,7 @@ import cors from 'cors';
 import express from 'express';
 import axios from 'axios';
 
-import {proxyMiddleware} from 'express-opensea-graphql-middleware';
+import {proxyMiddleware} from 'opensea-submarine';
 
 express()
   .use('/graphql', await proxyMiddleware({}))
