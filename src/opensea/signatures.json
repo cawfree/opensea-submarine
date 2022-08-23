@@ -58,6 +58,7 @@
   "CollectionFilterLazyQuery": "bc64559fba599a430cda0c53f3012a6b4e400833590de1e4a0a98c55cf52e57a",
   "CollectionFormAuthorizedEditorsMutation": "d9761d719ae7b19e9d02b4699a6b28922a7c7d103fc9a5695fba221f8390a3f2",
   "CollectionFormCollectionConnectedNetworkCreateMutation": "5e0ed93d8d3c1d24c8a3b501ecb15b031e177926739ae2fb3af96a2ea8a0260b",
+  "CreateCollectionOfferActionModalQuery": "bd4dfba8f80ce398f7d488a24dff19414e164c36f5ebfa5099701405d7f4ea02",
   "CollectionFormCollectionConnectedNetworkDeleteMutation": "70cae18cfa09194c792ac96b93af8ddeed151525275d524032d245bb8e6e0cfb",
   "CollectionFormDeleteMutation": "1fa3fe4383f73f6cf12ee3673c864c177d48155c959c99907bb20bc0ef18db8f",
   "CollectionNameInputQuery": "3b6762e1dc5ff976827d49f1ffdb87092be7692e1c76f92e90d1f0d08c7a1e18",
