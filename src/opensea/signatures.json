@@ -184,7 +184,7 @@
   "useAssetFavoriteMutation": "d3f55288dd86ea745448362b88dacd4316547c5c4259bfd33caff7e3b3c1b333",
   "useCollectionFeesSpecQuery": "1dba2a9f8cc5f34516bc29df51d2adeb9f736c0b3c23f17893dc670727ba0f95",
   "useHandleBlockchainActionsCancelOrdersMutation": "d3899c2ba71c44b7b0cb73f4feac3c6c08189fcd4a7968c2413084b0887697ca",
-  "useHandleBlockchainActionsCreateOrderMutation": "1ff3fc2286cbe577bf0121e7a8a74c496d9fff719ad3ddad5abb6e81c311a0c2",
+  "useHandleBlockchainActionsCreateOrderMutation": "7a636c506dff8e9ca92165555c42d3902c94b43de611d160991d8f2a123aa886",
   "useHandleBlockchainActionsWaitForBalanceQuery": "196c9ceba862104b8281450078a2394f0955db27567da97f006e792602140891",
   "useIsEditableQuery": "daca6186f3d626fd710567c81a67c6b1e3bd814dbdd53834fac08dbd15d896d1",
   "useMoonpayKycStatusQuery": "03b7ca64a42258238c84e9948c01971b5de423ada780f3f3f64e573d3068e868",
