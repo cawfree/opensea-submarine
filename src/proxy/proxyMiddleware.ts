@@ -59,7 +59,13 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
       .send(result);
   } catch (e) {
 
-    const message = String(e);
+    const maybeMessage = String(e);
+
+    const message = maybeMessage === String({})
+      ? JSON.stringify(maybeMessage)
+      : maybeMessage;
+
+    console.log('got message', e, maybeMessage);
 
     if (debug) console.log(chalk.red`${message}`);
 
