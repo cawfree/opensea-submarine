@@ -31,6 +31,7 @@
   "AssetPagePendingListingQuery": "c22f4b5638ef7e4c2b7e0da2b32b63eac86b2d5969f19af763c86f06de9bbef3",
   "AssetPageQuery": "c7879170f724184a23cba5882ef48863b8c5a4e9b42733f87490cdf61b50906b",
   "AssetSearchCollectionQuery": "e08e6df460a444381bce286c4dc8f5fddb7547fbd5b82f5d1a93c0ebb625cd2f",
+  "CreateListingActionModalQuery": "07e65b427200f7acaea456a3eaf4cfefa3ca517fef1e775f21d41ec6151e54d2",
   "AssetSearchFilterLazyQuery": "58f5701565eb363035cc47a216d20d2428b1a31766144b37397397be54b1577b",
   "AssetSearchListLoggedInQuery": "db6c14ef244c123a8b8b9f7e7c28073594604a25b5f11e3e2db732bd80a47543",
   "AssetSearchListPaginationQuery": "17928e329e0cac58d68e1c1574c25505ecb3eced59f902da0315535d69e8565f",
