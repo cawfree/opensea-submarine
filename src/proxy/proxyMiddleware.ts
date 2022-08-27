@@ -65,8 +65,6 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
       ? JSON.stringify(maybeMessage)
       : maybeMessage;
 
-    console.log(`Encountered error `, e, 'for request', req.body);
-
     if (debug) console.log(chalk.red`${message}`);
 
     const maybeThrottleRequestMillis = maybeParseThrottleErrorMessageMillis(message);
