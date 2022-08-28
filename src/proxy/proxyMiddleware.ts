@@ -65,10 +65,9 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
       ? JSON.stringify(maybeMessage)
       : maybeMessage;
 
-    if (debug) console.log(e, chalk.red`${message}`);
-
     const maybeThrottleRequestMillis = maybeParseThrottleErrorMessageMillis(message);
 
+    // Error: Too many requests. Please wait 437754 microseconds.
     if (typeof maybeThrottleRequestMillis === 'number') {
       // Inform the requester they should retry this request in the coming seconds.
       return res
@@ -77,8 +76,9 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
         .send({data: null});
     }
 
-    // Error: Too many requests. Please wait 437754 microseconds.
-
+    if (debug) {
+      console.log(chalk.red`${message}`, JSON.stringify(req.body));
+    }
 
     return res
       .status(500)
