@@ -50,12 +50,13 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
       if (Array.isArray(errors) && errors.length) throw result;
     }
 
-    return Object
-      .entries(responseHeaders)
-      .reduce(
-        (r, [k, v]) => r.setHeader(k, v),
-        res.status(200),
-      )
+    if (responseHeaders && typeof responseHeaders === 'object') {
+      Object.entries(responseHeaders)
+        .forEach(([k, v]) => res.setHeader(k, v));
+    }
+
+    return res
+      .status(200)
       .send(result);
   } catch (e) {
 
