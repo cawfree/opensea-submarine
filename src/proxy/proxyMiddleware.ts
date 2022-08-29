@@ -70,12 +70,13 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
 
     // Error: Too many requests. Please wait 437754 microseconds.
     if (typeof maybeThrottleRequestMillis === 'number') {
-      console.log('did get retry delays', maybeThrottleRequestMillis);
+      console.log('did get retry delays', maybeThrottleRequestMillis, !!res, !!res?.send);
+      res.status(200);
+      console.log('did get retry delays', maybeThrottleRequestMillis, !!res, !!res?.send);
       // Inform the requester they should retry this request in the coming seconds.
-      return res
-        .status(200)
-        .setHeader('retry-after', Math.ceil(maybeThrottleRequestMillis / 1000))
-        .send({data: null});
+      res.setHeader('retry-after', Math.ceil(maybeThrottleRequestMillis / 1000));
+      console.log('did get retry delays', maybeThrottleRequestMillis, !!res, !!res?.send);
+      return res.send({data: null});
     }
 
     if (debug) {
