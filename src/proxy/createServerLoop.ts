@@ -1,6 +1,7 @@
 import {Server} from 'net';
 import express from 'express';
 import cors from 'cors';
+import bodyParser from 'body-parser';
 
 import {ProxyContext, OpenSeaEnvironment} from '../@types';
 
@@ -34,6 +35,7 @@ export async function createServerLoop({
       const server = await new Promise<Server>(
         async resolve => {
           const server = express()
+            .use(bodyParser.json())
             .use(cors())
             .use(await proxyMiddleware({
               debug,

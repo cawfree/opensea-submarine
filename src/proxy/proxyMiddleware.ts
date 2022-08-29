@@ -135,7 +135,6 @@ export const proxyMiddleware = async ({
   if (!templateRequest) throw new Error(`Unable to find templateRequest.`);
 
   return express()
-    .use(bodyParser.json())
     .post('/graphql', openseaGraphQLProxy({
       debug,
       page,
