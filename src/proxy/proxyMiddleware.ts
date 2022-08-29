@@ -55,9 +55,15 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
         .forEach(([k, v]) => res.setHeader(k, v));
     }
 
-    return res
-      .status(200)
-      .send(result);
+
+    console.log('about to res.send', !!res, !!res?.send);
+
+    res?.status(200);
+    res?.send(result);
+
+   // return res
+   //   .status(200)
+   //   .send(result);
   } catch (e) {
 
     const maybeMessage = String(e);
