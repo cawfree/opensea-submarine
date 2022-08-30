@@ -63,7 +63,7 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
     const maybeMessage = String(e);
 
     const message = maybeMessage === String({})
-      ? JSON.stringify(maybeMessage)
+      ? JSON.stringify(e)
       : maybeMessage;
 
     const maybeThrottleRequestMillis = maybeParseThrottleErrorMessageMillis(message);
