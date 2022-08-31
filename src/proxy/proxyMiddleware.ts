@@ -62,7 +62,8 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
 
     const maybeMessage = String(e);
 
-    const message = maybeMessage === String({})
+    const isErrorObj = maybeMessage === String({});
+    const message = isErrorObj
       ? JSON.stringify(e)
       : maybeMessage;
 
@@ -79,6 +80,9 @@ const openseaGraphQLProxy = ({debug, page, templateRequest}: {
     if (debug) {
       console.log(chalk.red`${message}`, JSON.stringify(req.body));
     }
+
+    if (isErrorObj)
+      return res.status(500).send(e);
 
     return res
       .status(500)
