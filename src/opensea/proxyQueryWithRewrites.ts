@@ -78,6 +78,7 @@ export const proxyQueryWithRewrites = async ({
       headers: responseHeaders,
     };
   } catch (e) {
+    console.log('failed to parse', text);
     throw new Error(text);
   }
 }
