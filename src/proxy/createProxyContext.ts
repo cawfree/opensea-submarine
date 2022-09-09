@@ -6,8 +6,11 @@ export async function createProxyContext({
   graphQLUri,
   eventHistoryUri: uri,
   privacyUri,
-}: OpenSeaEnvironment): Promise<ProxyContext> {
-  const {browserContext, close: closeBrowser} = await createStealthBrowserContext({});
+  headless,
+}: OpenSeaEnvironment & Parameters<typeof createStealthBrowserContext>[0]): Promise<ProxyContext> {
+  const {browserContext, close: closeBrowser} = await createStealthBrowserContext({
+    headless,
+  });
   const {graphQLRequests, page} = await collectGraphQLRequests({
     browserContext,
     graphQLUri,
