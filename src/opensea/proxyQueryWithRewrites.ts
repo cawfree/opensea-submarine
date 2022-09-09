@@ -78,6 +78,7 @@ export const proxyQueryWithRewrites = async ({
       headers: responseHeaders,
     };
   } catch (e) {
+    console.error(e);
     throw new Error(text);
   }
 }

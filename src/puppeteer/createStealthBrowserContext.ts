@@ -4,11 +4,11 @@ import stealth from 'puppeteer-extra-plugin-stealth';
 
 export async function createStealthBrowserContext({
   executablePath = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome',
-  headless = true,
+  headless,
   debug: dumpio = false,
 }: {
   readonly executablePath?: string;
-  readonly headless?: boolean;
+  readonly headless: boolean;
   readonly debug?: boolean;
 }) {
   puppeteer.use(stealth());

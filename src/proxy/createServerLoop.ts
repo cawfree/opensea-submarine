@@ -13,12 +13,14 @@ export async function createServerLoop({
   timeout = null,
   delay,
   debug = false,
+  headless,
   ...openSeaEnvironment
 }: OpenSeaEnvironment & {
   readonly port: number;
   readonly timeout?: number | null;
   readonly delay: number;
   readonly debug?: boolean;
+  readonly headless: boolean;
 }) {
 
   // HACK: Introduce delays around initialization and restarts to avoid
@@ -31,7 +33,10 @@ export async function createServerLoop({
     const proxyContexts: ProxyContext[] = [];
 
     try {
-      const proxyContext = await createProxyContext(openSeaEnvironment);
+      const proxyContext = await createProxyContext({
+        ...openSeaEnvironment,
+        headless,
+      });
       const server = await new Promise<Server>(
         async resolve => {
           const server = express()
