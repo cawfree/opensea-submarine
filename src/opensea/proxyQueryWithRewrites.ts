@@ -78,7 +78,10 @@ export const proxyQueryWithRewrites = async ({
       headers: responseHeaders,
     };
   } catch (e) {
-    console.log('failed to parse', text);
+    // Print useful errors.
+    if (!text.startsWith('Too many requests.'))
+      console.log(text);
+
     throw new Error(text);
   }
 }
