@@ -1,5 +1,7 @@
 import 'dotenv/config';
 
+import findProcess from 'find-process';
+
 import {createServerLoop} from '../src';
 
 const {PORTS = '', DEBUG, HEADLESS} = process.env as Partial<{
@@ -22,7 +24,15 @@ if (!ports.length)
 // Prevent memory leak warning due to multiple concurrent puppeteer windows.
 process.setMaxListeners(ports.length);
 
+const killAllGoogleChromeProcesses = async () => {
+   (await findProcess('name', /Google Chrome/gi))
+    .map(({pid}) => process.kill(pid, 'SIGINT'));
+};
+
 void (async () => {
+  // Find all active instances relating to Google Chrome and kill them.
+  await killAllGoogleChromeProcesses();
+
   await Promise.all(
     ports.map((port: number, i: number) => createServerLoop({
       port,
