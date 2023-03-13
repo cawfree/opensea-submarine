@@ -1,3 +1,7 @@
+> ⚠️ This repository is __deprecated__.
+>
+> The technique of __Same-Origin-Resource-Crossing__, which this repository demonstrated can be used to attain access to closed-off APIs, has been generalized in [`@cawfree/sameorigin`](https://github.com/cawfree/sameorigin).
+
 # opensea-submarine
 
 [watch me breakdown](https://twitter.com/cawfree/status/1550505696747307013)
